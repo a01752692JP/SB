@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CH4 – Ver en AR</title>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #0f0f0f;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      font-family: system-ui, sans-serif;
+      color: #fff;
+    }
+    model-viewer {
+      width: 100vw;
+      height: 90vh;
+    }
+    #hint {
+      font-size: 13px;
+      color: #888;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <model-viewer
+    src="CH4.glb"
+    camera-controls
+    auto-rotate
+    autoplay
+    ar
+    ar-modes="webxr scene-viewer quick-look"
+    ar-scale="auto"
+    shadow-intensity="1"
+    environment-image="neutral"
+  ></model-viewer>
+  <p id="hint">Toca el ícono AR (esquina inferior derecha) para verlo en tu espacio</p>
+</body>
+</html>
